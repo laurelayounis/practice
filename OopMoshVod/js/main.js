@@ -43,4 +43,25 @@ this.draw= function(){
 //create a new cirlce using the new operator & pass 1 as the argument
 const another= new Circle(1)
 
+circle.location={x: 1};
 
+const propertyName= 'center location'
+circle[propertyName]= {x: 1};
+
+
+delete circle.location;
+
+/*iterate over the obj*/
+
+for(let key in circle){
+    if(typeof circle[key] !== 'function')
+    console.log(key, circle[key]);
+}
+
+Object.keys(circle);
+console.log(keys);
+
+
+if('radius' in cirlce){
+    console.log('circle has a radius')
+}
